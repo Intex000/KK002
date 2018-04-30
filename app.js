@@ -6,7 +6,7 @@ const PREFIX ="sv.";
 
 // Log in
 bot.on('ready', async () => {
-  console.log("CodePurple is ready! ", (bot.user.tag));  
+  console.log("Sir! KK002 is ready! ", (bot.user.tag));  
   bot.user.setActivity("Prefix: sv.", {type: "playing"});
 });
 // Commands
@@ -29,7 +29,7 @@ let admin = message.guild.roles.find("name", "Admin")
 let moderator = message.guild.roles.find("name", "Moderator")   
 switch (args[0]) {
   case "discord":
-    message.channel.sendMessage(config.discordlink);
+    message.channel.sendMessage("https://discordapp.com/invite/YMRp8RT");
     print((config.thread), "A User just executed a command: sv.discord")
     break;
 
@@ -60,7 +60,7 @@ switch (args[0]) {
     .setColor("993")
     message.reply("Check your DMs")
     message.author.sendEmbed(embed);
-      console.log((config.thread), "A User just executed a command: sv.help")
+      console.log("A User just executed a command: sv.help")
     break;
 }
 });
