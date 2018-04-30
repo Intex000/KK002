@@ -69,4 +69,4 @@ if(message.content === s)
   .setColor("#00cc00")  
   //new
 });
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.token);
