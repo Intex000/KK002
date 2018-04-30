@@ -63,10 +63,5 @@ switch (args[0]) {
       console.log((config.thread), "A User just executed a command: sv.help")
     break;
 }
-if(message.content === s)
-  let logs = new Discord.RichEmbed()
-  .setDescription("")
-  .setColor("#00cc00")  
-  //new
 });
 bot.login(process.env.token);
