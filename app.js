@@ -63,5 +63,9 @@ switch (args[0]) {
       console.log("A User just executed a command: sv.help")
     break;
 }
+  if(message.content === "$mc"){
+    message.channel.sendMessage("Minecraft")
+    
+  }
 });
 bot.login(process.env.token);
