@@ -30,12 +30,12 @@ let moderator = message.guild.roles.find("name", "Moderator")
 switch (args[0]) {
   case "discord":
     message.channel.sendMessage("https://discordapp.com/invite/YMRp8RT");
-    print((message.author.username), "issued bot command: sv.discord")
+    print((message.author.username), "issued bot command: discord")
     break;
 
   case "ip":
-    message.channel.sendMessage("The IP is: SlingShotV.aternos.me \n Version: 1.8x")
-    print((message.author.username), "issued bot command: sv.ip")
+    message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x")
+    print((message.author.username), "issued bot command: ip")
     break;
   case ":":
   if(!message.member.hasPermission("ADMINISTRATOR")) return;
