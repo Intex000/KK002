@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const config = require("./package.json");
+const config = require("./settings.json");
 const PREFIX ="$";
 
 
@@ -30,7 +30,7 @@ let moderator = message.guild.roles.find("name", "Moderator")
 switch (args[0]) {
   case "discord":
     message.channel.sendMessage("https://discordapp.com/invite/YMRp8RT");
-    print((config.thread), "A User just executed a command: sv.discord")
+    print((message.author.username), "issued bot command: sv.discord")
     break;
 
   case "ip":
