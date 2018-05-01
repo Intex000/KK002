@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const config = require("./package.json");
-const PREFIX ="sv.";
+const PREFIX ="$";
 
 
 // Log in
@@ -34,8 +34,8 @@ switch (args[0]) {
     break;
 
   case "ip":
-    message.channel.sendMessage("The IP is: ")
-    print((config.thread), "A User just executed a command: sv.ip")
+    message.channel.sendMessage("The IP is: Slingshotv.aternos.me")
+    print("A User just executed a command: sv.ip")
     break;
   case ":":
   if(!message.member.hasPermission("ADMINISTRATOR")) return;
