@@ -64,9 +64,5 @@ switch (args[0]) {
       console.log("A User just executed a command: sv.help")
     break;
 }
-  if(message.channel.id === "433130096287678464"){
-    message.channel.sendMessage("Minecraft")
-    
-  }
 });
 bot.login(process.env.token);
