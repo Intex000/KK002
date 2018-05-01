@@ -7,7 +7,7 @@ const PREFIX ="$";
 // Log in
 bot.on('ready', async () => {
   console.log("Sir! KK002 is ready! ", (bot.user.tag));  
-  bot.user.setActivity("Prefix: sv.", {type: "playing"});
+  bot.user.setGame("Prefix: sv.");
 });
 // Commands
 bot.on("message", function(message) {
@@ -30,12 +30,13 @@ let moderator = message.guild.roles.find("name", "Moderator")
 switch (args[0]) {
   case "discord":
     message.channel.sendMessage("https://discordapp.com/invite/YMRp8RT");
-    print((message.createdAt), (message.author.username), "issued bot command: discord")
+    print((message.author.username), "issued bot command: discord")
     break;
 
   case "ip":
     message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x")
     print((message.author.username), "issued bot command: ip")
+    message.channel.id("429226419957268500").sendMessage("helolo");
     break;
   case ":":
   if(!message.member.hasPermission("ADMINISTRATOR")) return;
@@ -63,7 +64,7 @@ switch (args[0]) {
       console.log("A User just executed a command: sv.help")
     break;
 }
-  if(message.content === "$mc "){
+  if(message.channel.id === "433130096287678464"){
     message.channel.sendMessage("Minecraft")
     
   }
