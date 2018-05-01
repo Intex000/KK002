@@ -30,7 +30,7 @@ let moderator = message.guild.roles.find("name", "Moderator")
 switch (args[0]) {
   case "discord":
     message.channel.sendMessage("https://discordapp.com/invite/YMRp8RT");
-    print((message.author.username), "issued bot command: discord")
+    print((mesage.createdAt), (message.author.username), "issued bot command: discord")
     break;
 
   case "ip":
@@ -48,7 +48,7 @@ switch (args[0]) {
   break;  
   case "cmds":
   var embed = new Discord.RichEmbed()
-  .setTitle("Please use sv.help ")
+  .setTitle("Please use $help ")
   message.channel.sendMessage(embed)
   break;
   case "help":
