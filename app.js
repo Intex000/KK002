@@ -30,7 +30,7 @@ let moderator = message.guild.roles.find("name", "Moderator")
 switch (args[0]) {
   case "discord":
     message.channel.sendMessage("https://discordapp.com/invite/YMRp8RT");
-    print((mesage.createdAt), (message.author.username), "issued bot command: discord")
+    print((message.createdAt), (message.author.username), "issued bot command: discord")
     break;
 
   case "ip":
