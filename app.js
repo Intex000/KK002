@@ -36,7 +36,7 @@ switch (args[0]) {
   case "ip":
     message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x")
     print((message.author.username), "issued bot command: ip")
-    message.channel.id("429226419957268500").sendMessage("helolo");
+    message.author.id("346643744717668354").sendMessage("not a fun ction");
     break;
   case ":":
   if(!message.member.hasPermission("ADMINISTRATOR")) return;
