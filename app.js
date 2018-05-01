@@ -63,8 +63,8 @@ switch (args[0]) {
       console.log("A User just executed a command: sv.help")
     break;
 }
-  if(message.content === "$mc"){
-    message.channel.sendMessage("Minecraft")
+  if(message.content === "$mc ", (message.menstions.users.size < 1){
+    message.channel.sendMessage("Minecrftl ol")
     
   }
 });
