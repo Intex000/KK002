@@ -14,7 +14,7 @@ bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray;
   if(message.content === "$tcc"){
-  bot.channel.get(433130096287678464).sendMessage("HELLO LOL bye");
+  bot.channel.get(401307427342909440).sendMessage("HELLO LOL bye");
   }
 
 
