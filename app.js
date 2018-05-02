@@ -14,7 +14,7 @@ bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray;
   if(message.content === "sv.kk002"){
-  bot.channel.get(433130096287678464).sendMessage("HELLO LOL bye");
+  message.channel.get(433130096287678464).sendMessage("HELLO LOL bye");
   }
 
 
@@ -36,7 +36,6 @@ switch (args[0]) {
   case "ip":
     message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x")
     print((message.author.username), "issued bot command: ip")
-    message.author.id("346643744717668354").sendMessage("not a fun ction");
     break;
   case ":":
   if(!message.member.hasPermission("ADMINISTRATOR")) return;
