@@ -13,7 +13,7 @@ bot.on('ready', async () => {
 bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray;
-  if(message.content === "sv.kk002"){
+  if(message.content === "$tcc"){
   message.channel.get(433130096287678464).sendMessage("HELLO LOL bye");
   }
 
