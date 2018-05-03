@@ -31,7 +31,7 @@ switch (args[0]) {
   case "discord":
     var ediscord = new Discord.RichEmbed()
     .setTitle("https://discord.gg/FZThJ2b");
-    message.channel.sendMessage(ediscord);
+    message.channel.sendEmbed(ediscord);
     print((message.author.username), "issued bot command: discord")
     break;
 
