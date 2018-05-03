@@ -29,7 +29,9 @@ let admin = message.guild.roles.find("name", "Admin")
 let moderator = message.guild.roles.find("name", "Moderator")   
 switch (args[0]) {
   case "discord":
-    message.channel.sendMessage("https://discordapp.com/invite/YMRp8RT");
+    var ediscord = new Discord.RichEmbed()
+    .setTitle("https://discord.gg/FZThJ2b");
+    message.channel.sendMessage(ediscord);
     print((message.author.username), "issued bot command: discord")
     break;
 
