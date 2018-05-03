@@ -13,9 +13,7 @@ bot.on('ready', async () => {
 bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray;
-  if(message.content === "$tcc"){
-  bot.channel.get(401307427342909440).sendMessage("HELLO LOL bye");
-  }
+
 
 
 if (!message.content.startsWith(PREFIX)) return;  
@@ -31,12 +29,11 @@ switch (args[0]) {
   case "discord":
     var ediscord = new Discord.RichEmbed()
     .setTitle("https://discord.gg/FZThJ2b");
-    message.channel.find("429226419957268500").sendEmbed(ediscord);
+    message.channel.sendEmbed(ediscord);
     print((message.author.username), "issued bot command: discord")
     break;
 
   case "ip":
-    var eip = new Discord.RichEmbed();
     message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x");
     print((message.author.username), "issued bot command: ip")
     break;
