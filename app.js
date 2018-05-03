@@ -36,7 +36,9 @@ switch (args[0]) {
     break;
 
   case "ip":
-    message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x")
+    var eip = new Discord.RichEmbed();
+    .setTitle("The IP is: SlingShotV.aternos.me \nVersion: 1.8x");
+    message.channel.sendEmbed(ediscord);
     print((message.author.username), "issued bot command: ip")
     break;
   case ":":
