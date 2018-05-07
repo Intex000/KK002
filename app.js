@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const config = require("./settings.json");
+const config = require("./settings.yaml");
 const test = require("./test.yaml");
 const PREFIX ="$";
 
