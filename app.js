@@ -57,7 +57,7 @@ switch (args[0]) {
     .setColor("993")
     message.reply("Check your DMs")
     message.author.sendEmbed(embed);
-      console.log("A User just executed a command: sv.help")
+      console.log((message.author.username), "issued bot command: help");
     break;
 }
 });
