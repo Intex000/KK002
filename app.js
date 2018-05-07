@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const config = require("./settings.json");
+const test = require("./test.yaml");
 const PREFIX ="$";
 
 
@@ -35,7 +36,8 @@ switch (args[0]) {
 
   case "ip":
     message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x");
-    print((message.author.username), "issued bot command: ip")
+    print((message.author.username), "issued bot command: ip");
+    print((test.hello), "lol");
     break;
   case ":":
   if(!message.member.hasPermission("ADMINISTRATOR")) return;
