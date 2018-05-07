@@ -21,10 +21,7 @@ var args = message.content.substring(PREFIX.length).split(" ");
 var print = console.log;
 let prefix = config.prefix;
 
-let args2 = messageArray.slice(1);
-let owner = message.guild.roles.find("name", "Owner") 
-let admin = message.guild.roles.find("name", "Admin")
-let moderator = message.guild.roles.find("name", "Moderator")   
+let args2 = messageArray.slice(1);  
 switch (args[0]) {
   case "discord":
     var ediscord = new Discord.RichEmbed()
