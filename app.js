@@ -31,7 +31,7 @@ switch (args[0]) {
     break;
 
   case "ip":
-    message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.8x");
+    message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.11x");
     print((message.author.username), "issued bot command: ip");
     break;
   case ":":
