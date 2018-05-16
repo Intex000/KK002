@@ -6,6 +6,7 @@ const PREFIX ="$";
 // Log in
 bot.on('ready', async () => {
   console.log("Sir! KK002 is ready! ", (bot.user.tag));  
+  message.guild.channels.find('name', "logs").send("KK002 is back!");
   bot.user.setGame("Prefix: sv.");
 });
 // Commands
