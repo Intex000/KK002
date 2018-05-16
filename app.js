@@ -9,7 +9,7 @@ bot.on("ready", () => {
   console.log("Sir, KK002 is ready!")
   console.log("The BOT IS BACK!")
   console.log("===================================")
-}
+});
 // Commands
 bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
