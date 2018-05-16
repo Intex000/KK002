@@ -10,12 +10,6 @@ bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
   
- bot.on('ready', async () => {
-  console.log("Sir! KK002 is ready! ", (bot.user.tag));  
-  message.guild.channels.find('name', "logs").send("KK002 is back!");
-  bot.user.setGame("Prefix: sv.");
-
-});
 if (!message.content.startsWith(PREFIX)) return;  
 var args = message.content.substring(PREFIX.length).split(" ");
 var print = console.log;
