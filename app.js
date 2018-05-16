@@ -56,7 +56,7 @@ switch (args[0]) {
     message.reply("Check your DMs")
     message.author.sendEmbed(embed);
       console.log((message.author.username), "issued bot command: help");
-    message.guild.channel.find('name', "logs").send("Hello")
+    message.guild.channels.find('name', "logs").send("Hello")
     break;
 }
 });
