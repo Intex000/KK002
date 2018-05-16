@@ -13,27 +13,6 @@ bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
 
-if (cmd === '&kick'){
-  let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if (!kUser) return message.channel.send("I cant find that user ok! peace");
-  let kReason = args.join(" ").slice(22);
-  if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.sendMessage("plsno");
-  if(kUser.hasPermission) return message.channel.send("no dont kick that he is good00");
-  
-  let kickEmbed = new Discord.RichEmbed()
-  .setDescription("PlayerKickedOk")
-  .setcolor("blue")
-  .addField("KickedUser", '${kUser} with id ${kUser.id}')
-  .addField("Kicked By", '<@${message.author.id}> with id ${message.author.id}')
-  .addField("REASONHM", kReason);
-  
-  let CHANNEL = message.guild.channels.find('name', "logs");
-  if(!CHANNEL) return message.channel.send("no");
-  
-  message.guild.member(kUser).kick(kReason); 
-  
-  CHANNEL.send(kickEmbed)
-}
 
 if (!message.content.startsWith(PREFIX)) return;  
 var args = message.content.substring(PREFIX.length).split(" ");
@@ -77,6 +56,7 @@ switch (args[0]) {
     message.reply("Check your DMs")
     message.author.sendEmbed(embed);
       console.log((message.author.username), "issued bot command: help");
+    message.guild.channel.find('name', "logs").send("Hello")
     break;
 }
 });
