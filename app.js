@@ -52,12 +52,14 @@ switch (args[0]) {
   message.channel.sendMessage(embed)
     message.guild.channels.find('name', "logs").send((message.author.username), + " issued bot command: cmds");
   break;
+  case: "test":
+    message.channels.find('name', "logs").send("Nice");
   case "help":
 
     var embed = new Discord.RichEmbed()
     .setTitle("Commands List!")   
     .setDescription(config.help)
-    .setFooter("The bot prefix is: sv.")
+    .setFooter("The bot prefix is: $")
     .setColor("993")
     message.reply("Check your DMs")
     message.author.sendEmbed(embed);
