@@ -14,7 +14,11 @@ bot.on("ready", () => {
 bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
-  
+ // --------------------------------------------------
+  if(cmd === "huh"){
+    message.channel.sendMessage("CAmpaa")
+  }
+// ---------------------------------------------------
 if (!message.content.startsWith(PREFIX)) return;  
 var args = message.content.substring(PREFIX.length).split(" ");
 var print = console.log;
@@ -67,8 +71,5 @@ switch (args[0]) {
     message.guild.channels.find('name', "logs").send((message.author.username) + " issued bot command: help");
     break;
 }
-  if(message.content === "Hi"){
-    message.channel.send("Hi There") 
-  }
 });
 bot.login(process.env.token);
