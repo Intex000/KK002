@@ -34,6 +34,7 @@ switch (args[0]) {
     message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.11x");
     print((message.author.username), "issued bot command: ip");
     message.guild.channels.find('name', "logs").send((message.author.username) + " issued bot command: ip");
+    message.guild.channels.find('name', "console").send((message.author.username) + " issued bot command: ip");
     break;
   case ":":
   if(!message.member.hasPermission("ADMINISTRATOR")) return;
