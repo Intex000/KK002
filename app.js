@@ -9,7 +9,7 @@ bot.on("ready", () => {
   console.log("Sir, KK002 is ready!")
   console.log("The BOT IS BACK!")
   console.log("===================================")
-  client.user.setActivity('Youtube', { type: 'WATCHING' })
+  bot.user.setActivity('Youtube', { type: 'WATCHING' })
 });
 // Commands
 bot.on("message", function(message) {
