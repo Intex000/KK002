@@ -15,9 +15,7 @@ bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
  // --------------------------------------------------
-  if(cmd === "huh"){
-    message.channel.sendMessage("CAmpaa")
-  }
+
 // ---------------------------------------------------
 if (!message.content.startsWith(PREFIX)) return;  
 var args = message.content.substring(PREFIX.length).split(" ");
