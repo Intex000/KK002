@@ -45,6 +45,7 @@ switch (args[0]) {
       message.delete().catch();
       message.channel.send(sayMessage);
     message.guild.channels.find('name', "logs").sendMessage((message.author.username), + " issued bot command: :");
+    break;
   case "randomnumber":
     var randomNumb = Math.random();
     message.channel.send((randomNumb));
