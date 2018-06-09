@@ -17,11 +17,13 @@ bot.on("message", async message => {
   let cmd = messageArray[0]; 
   let args = messageArray.slice(1)
  // --------------------------------------------------
- if(cmd === "$jj") {
+ if(cmd === "$reportbug") {
   const sayMessage = args.join(" ");
   var ekick = new Discord.RichEmbed() 
-  .setDescription("KICKED")
-  .addField(sayMessage + "was kicked by gsynegfc");
+  .setDescription("---KICKED---")
+  .addField((sayMessage) + " was kicked by gsynegfc")
+  .setColor("ff0000")
+  .setFooter("Kicked by" + (message.author.username));
   message.guild.channels.find('name', "¤》logs").sendEmbed(ekick)
  }
   
