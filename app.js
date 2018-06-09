@@ -26,6 +26,7 @@ bot.on("message", async message => {
   .setColor("ff0000");
   message.guild.channels.find('name', "¤》reports").sendEmbed(ekick)
   message.delete().catch();
+  message.author.sendMessage("Thanks for reporting! Your report will be reviewed soon.")
  }
   
   if(cmd === "$help") {
