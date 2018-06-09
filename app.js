@@ -12,7 +12,7 @@ bot.on("ready", () => {
   bot.user.setGame('mc');
 });
 // Commands
-bot.on("message", function(message) {
+bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
  // --------------------------------------------------
