@@ -17,12 +17,13 @@ bot.on("message", async message => {
   let cmd = messageArray[0]; 
   let args = messageArray.slice(1)
  // --------------------------------------------------
-  let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(message.content === "$gg " + (kUser)) {
-    
-    if(!kUser) return message.channel.sendMessage("Error: cannot find user");
-  
-  }
+ if(cmd === "$jj") {
+  const sayMessage = args.join(" ");
+  var ekick = new Discord.RichEmbed() 
+  .setDescription("KICKED")
+  .addField(sayMessage + "was kicked by gsynegfc");
+  message.guild.channels.find('name', "¤》logs").sendEmbed(ekick)
+ }
   
   if(cmd === "$help") {
        var embed = new Discord.RichEmbed()
