@@ -21,9 +21,9 @@ bot.on("message", async message => {
   const sayMessage = args.join(" ");
   var ekick = new Discord.RichEmbed() 
   .setDescription("---KICKED---")
-  .addField((sayMessage) + " was kicked by gsynegfc")
+  .addField(sayMessage + " was kicked by gsynegfc")
   .setColor("ff0000")
-  .setFooter("Kicked by" + (message.author.username));
+  .setFooter("Kicked by" + message.author.username);
   message.guild.channels.find('name', "¤》logs").sendEmbed(ekick)
  }
   
