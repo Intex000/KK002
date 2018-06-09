@@ -33,7 +33,7 @@ switch (args[0]) {
     .setTitle("https://discord.gg/FZThJ2b");
     message.channel.sendEmbed(ediscord);
     print((message.author.username), "issued bot command: discord")
-    message.guild.channels.find('name', "logs").sendMessage((message.author.username) + " issued bot command: discord");
+    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: discord");
     break;
 
   case "ip":
