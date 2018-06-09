@@ -42,12 +42,10 @@ bot.on("message", async message => {
    var ediscord = new Discord.RichEmbed()
     .setTitle("https://discord.gg/FZThJ2b");
     message.channel.sendEmbed(ediscord);
-    print((message.author.username), "issued bot command: discord")
     message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: discord"); 
   }
   if(cmd === "$ip") {
    message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.11x");
-    print((message.author.username), "issued bot command: ip");
     message.guild.channels.find('name', "¤》logs").send((message.author.username) + " issued bot command: ip"); 
   }
   if(cmd === "$:") {
