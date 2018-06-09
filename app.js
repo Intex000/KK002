@@ -18,7 +18,7 @@ bot.on("message", async message => {
  // --------------------------------------------------
   let kUser = message.guild.member(message.mentions.users.first());
   if(message.content === "$gg") {
-  message.channel.sendMessage('meow meow mewowe moew');
+  message.channel.sendMessage('meow meow ${kUser}!');
   }
 // ---------------------------------------------------
 if (!message.content.startsWith(PREFIX)) return;  
