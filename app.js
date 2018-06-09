@@ -19,7 +19,7 @@ bot.on("message", async message => {
  // --------------------------------------------------
   
   if(message.content === "$gg") {
-    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
+    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!kUser) message.channel.sendMessage("Error: cannot find user")
   message.channel.sendMessage('meow meow' + (kUser) + 'Hello');
   }
