@@ -57,7 +57,7 @@ bot.on("message", async message => {
     message.channel.send((randomNumb));
     message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: randomnumber"); 
   }
-  if(cmd === "$cmds"
+  if(cmd === "$cmds")
     var embed = new Discord.RichEmbed()
   .setTitle("Please use $help ")
   message.channel.sendMessage(embed)
