@@ -16,7 +16,7 @@ bot.on("message", function(message) {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
  // --------------------------------------------------
-  let kUser = message.guild.member(message.mentions.users.first();
+  let kUser = message.guild.member(message.mentions.users.first());
   message.channel.sendMessage('Test ${kUser}!');
 // ---------------------------------------------------
 if (!message.content.startsWith(PREFIX)) return;  
