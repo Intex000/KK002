@@ -21,6 +21,18 @@ bot.on("message", async message => {
   if(message.content === "$gg") {
   message.channel.sendMessage('meow meow' + (kUser) + 'Hello');
   }
+  
+  if(cmd === "$help") {
+       var embed = new Discord.RichEmbed()
+    .setTitle("Commands List!")   
+    .setDescription(config.help)
+    .setFooter("The bot prefix is: $")
+    .setColor("993")
+    message.reply("Check your DMs")
+    message.author.sendEmbed(embed);
+      console.log((message.author.username), "issued bot command: help");
+    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: help"); 
+  }
 // ---------------------------------------------------
 if (!message.content.startsWith(PREFIX)) return;  
 var print = console.log;
@@ -64,15 +76,7 @@ switch (args[0]) {
     
   case "help":
 
-    var embed = new Discord.RichEmbed()
-    .setTitle("Commands List!")   
-    .setDescription(config.help)
-    .setFooter("The bot prefix is: $")
-    .setColor("993")
-    message.reply("Check your DMs")
-    message.author.sendEmbed(embed);
-      console.log((message.author.username), "issued bot command: help");
-    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: help");
+
     break;
 }
 });
