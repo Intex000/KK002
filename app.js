@@ -16,7 +16,7 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
  // --------------------------------------------------
-  let kUser = message.guild.member(message.mentions.users.first()); || message.guild.members.get(args[0]));
+  let kUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]));
   if(message.content === "$gg") {
   message.channel.sendMessage('meow meow' + (kUser) + 'Hello');
   }
