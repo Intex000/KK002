@@ -20,10 +20,11 @@ bot.on("message", async message => {
  if(cmd === "$reportbug") {
   const sayMessage = args.join(" ");
   var ekick = new Discord.RichEmbed() 
-  .setDescription("---KICKED---")
-  .addField(sayMessage + " was kicked by gsynegfc")
+  .setTitle("Bug Report")
+  .setDescription(sayMessage)
+  .setFooter("Reported by: " + message.author.username);
   .setColor("ff0000");
-  message.guild.channels.find('name', "¤》logs").sendEmbed(ekick)
+  message.guild.channels.find('name', "¤》reports").sendEmbed(ekick)
  }
   
   if(cmd === "$help") {
