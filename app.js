@@ -17,7 +17,7 @@ bot.on("message", function(message) {
   let cmd = messageArray; 
  // --------------------------------------------------
   let kUser = message.guild.member(message.mentions.users.first());
-  if(cmd === "$gg") {
+  if(message.content === "$gg") {
   message.channel.sendMessage('meow meow mewowe moew');
   }
 // ---------------------------------------------------
