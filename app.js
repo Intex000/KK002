@@ -58,7 +58,7 @@ switch (args[0]) {
     message.guild.channels.find('name', "logs").sendMessage((message.author.username) + " issued bot command: cmds");
   break;
   case "test":
-    message.guild.channels.find('name', "logs").sendMessage("Nice");
+    
   case "help":
 
     var embed = new Discord.RichEmbed()
