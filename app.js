@@ -22,7 +22,7 @@ bot.on("message", async message => {
   var ekick = new Discord.RichEmbed() 
   .setTitle("Bug Report")
   .setDescription(sayMessage)
-  .setFooter("Reported by: " + message.author.username);
+  .setFooter("Reported by: " + message.author.username)
   .setColor("ff0000");
   message.guild.channels.find('name', "¤》reports").sendEmbed(ekick)
  }
