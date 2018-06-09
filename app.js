@@ -15,6 +15,7 @@ bot.on("ready", () => {
 bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray; 
+  let args = messageArray.slice(1)
  // --------------------------------------------------
   let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(message.content === "$gg") {
@@ -22,7 +23,6 @@ bot.on("message", async message => {
   }
 // ---------------------------------------------------
 if (!message.content.startsWith(PREFIX)) return;  
-var args = message.content.substring(PREFIX.length).split(" ");
 var print = console.log;
 let prefix = config.prefix;
 
