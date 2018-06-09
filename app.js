@@ -33,6 +33,35 @@ bot.on("message", async message => {
       console.log((message.author.username), "issued bot command: help");
     message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: help"); 
   }
+  if(cmd === "$discord") {
+   var ediscord = new Discord.RichEmbed()
+    .setTitle("https://discord.gg/FZThJ2b");
+    message.channel.sendEmbed(ediscord);
+    print((message.author.username), "issued bot command: discord")
+    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: discord"); 
+  }
+  if(cmd === "$ip") {
+   message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.11x");
+    print((message.author.username), "issued bot command: ip");
+    message.guild.channels.find('name', "¤》logs").send((message.author.username) + " issued bot command: ip"); 
+  }
+  if(cmd === "$:") {
+   if(!message.member.hasPermission("ADMINISTRATOR")) return;
+      const sayMessage = args.join(" ");
+      message.delete().catch();
+      message.channel.send(sayMessage);
+    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: :"); 
+  }
+  if(cmd === "$randomnumber") {
+   var randomNumb = Math.random();
+    message.channel.send((randomNumb));
+    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: randomnumber"); 
+  }
+  if(cmd === "$cmds"
+    var embed = new Discord.RichEmbed()
+  .setTitle("Please use $help ")
+  message.channel.sendMessage(embed)
+    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: cmds");
 // ---------------------------------------------------
 if (!message.content.startsWith(PREFIX)) return;  
 var print = console.log;
@@ -41,36 +70,21 @@ let prefix = config.prefix;
 let args2 = messageArray.slice(1);  
 switch (args[0]) {
   case "discord":
-    var ediscord = new Discord.RichEmbed()
-    .setTitle("https://discord.gg/FZThJ2b");
-    message.channel.sendEmbed(ediscord);
-    print((message.author.username), "issued bot command: discord")
-    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: discord");
+    
     break;
 
   case "ip":
-    message.channel.sendMessage("The IP is: SlingShotV.aternos.me \nVersion: 1.11x");
-    print((message.author.username), "issued bot command: ip");
-    message.guild.channels.find('name', "¤》logs").send((message.author.username) + " issued bot command: ip");
+    
 
     break;
   case ":":
-  if(!message.member.hasPermission("ADMINISTRATOR")) return;
-      const sayMessage = args.join(" ");
-      message.delete().catch();
-      message.channel.send(sayMessage);
-    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: :");
+  
     break;
   case "randomnumber":
-    var randomNumb = Math.random();
-    message.channel.send((randomNumb));
-    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: randomnumber");
+    
   break;  
   case "cmds":
-  var embed = new Discord.RichEmbed()
-  .setTitle("Please use $help ")
-  message.channel.sendMessage(embed)
-    message.guild.channels.find('name', "¤》logs").sendMessage((message.author.username) + " issued bot command: cmds");
+
   break;
   case "test":
     
