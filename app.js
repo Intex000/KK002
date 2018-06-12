@@ -8,7 +8,7 @@ bot.on("ready", () => {
   console.log("===================================")
   console.log("Sir, KK002 is ready!")
   console.log("The BOT IS BACK!")
-  console.log("===================================")
+  console.log("==================================")
   bot.user.setGame('mc');
 });
 // Commands
@@ -26,6 +26,9 @@ bot.on("message", async message => {
   .setColor("ff0000");
   message.guild.channels.find('name', "¤》reports").sendEmbed(ekick)
   message.delete().catch();
+  if(!message.guild.channels.find('name', "¤》reports")){
+    message.channel.send("Sorry, I cannot find the reports channel, please create one.");
+    }
   message.author.sendMessage("Thanks for reporting! Your report will be reviewed soon.")
  }
   
